@@ -1,0 +1,193 @@
+{
+  "apiRequests": [
+    {
+      "method": "POST",
+      "url": "https://eth.llamarpc.com",
+      "timestamp": "2024-12-17T23:44:26.708Z"
+    },
+    {
+      "method": "POST",
+      "url": "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "timestamp": "2024-12-17T23:44:26.716Z"
+    },
+    {
+      "method": "POST",
+      "url": "https://eth.llamarpc.com",
+      "timestamp": "2024-12-17T23:44:26.724Z"
+    },
+    {
+      "method": "POST",
+      "url": "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "timestamp": "2024-12-17T23:44:26.724Z"
+    },
+    {
+      "method": "POST",
+      "url": "https://eth.llamarpc.com",
+      "timestamp": "2024-12-17T23:44:27.802Z"
+    },
+    {
+      "method": "POST",
+      "url": "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "timestamp": "2024-12-17T23:44:27.803Z"
+    }
+  ],
+  "apiResponses": [
+    {
+      "url": "https://eth.llamarpc.com",
+      "status": 200,
+      "durationMs": 939,
+      "timestamp": "2024-12-17T23:44:27.663Z"
+    },
+    {
+      "url": "https://eth.llamarpc.com",
+      "status": 200,
+      "durationMs": 1213,
+      "timestamp": "2024-12-17T23:44:27.921Z"
+    },
+    {
+      "url": "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "status": 200,
+      "durationMs": 1262,
+      "timestamp": "2024-12-17T23:44:27.986Z"
+    },
+    {
+      "url": "https://eth.llamarpc.com",
+      "status": 200,
+      "durationMs": 269,
+      "timestamp": "2024-12-17T23:44:28.071Z"
+    },
+    {
+      "url": "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "status": 200,
+      "durationMs": 1480,
+      "timestamp": "2024-12-17T23:44:28.196Z"
+    },
+    {
+      "url": "https://endpoints.omniatech.io/v1/eth/mainnet/public",
+      "status": 200,
+      "durationMs": 1383,
+      "timestamp": "2024-12-17T23:44:29.186Z"
+    }
+  ],
+  "successfulQuotes": [
+    {
+      "source": "Kyberswap",
+      "id": "kyberswap",
+      "sellAmount": "100.0 USDC",
+      "gasCost": "0.002045093008925 ETH",
+      "gasCostUSD": "7.91"
+    }
+  ],
+  "failedQuotes": [
+    {
+      "source": "Bebop",
+      "id": "bebop",
+      "error": "The current context or config is not valid for source with id 'bebop'"
+    },
+    {
+      "source": "Paraswap",
+      "id": "paraswap",
+      "error": "Paraswap: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"{\\\"error\\\":\\\"Validation failed: \\\\\\\"userAddress\\\\\\\" is required\\\"}\""
+    },
+    {
+      "source": "XY Finance",
+      "id": "xy-finance",
+      "error": "XY Finance: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"Failed with code 30005 and message 'XY DexAggregator is not supported on chain 1'\""
+    },
+    {
+      "source": "0x/Matcha",
+      "id": "0x",
+      "error": "The current context or config is not valid for source with id '0x'"
+    },
+    {
+      "source": "1inch",
+      "id": "1inch",
+      "error": "The current context or config is not valid for source with id '1inch'"
+    },
+    {
+      "source": "Uniswap",
+      "id": "uniswap",
+      "error": "Uniswap: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"{\\\"detail\\\":\\\"\\\\\\\"recipient\\\\\\\" with value \\\\\\\"undefined\\\\\\\" fails to match the required pattern: /^0x[a-fA-F0-9]{40}$/\\\",\\\"errorCode\\\":\\\"VALIDATION_ERROR\\\"}\""
+    },
+    {
+      "source": "Open Ocean",
+      "id": "open-ocean",
+      "error": "Cannot read properties of undefined (reading 'outAmount')"
+    },
+    {
+      "source": "LI.FI",
+      "id": "li-fi",
+      "error": "LI.FI: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"{\\\"message\\\":\\\"/fromAddress Invalid address\\\",\\\"code\\\":1011}\""
+    },
+    {
+      "source": "Odos",
+      "id": "odos",
+      "error": "Address \"undefined\" is invalid.\n\n- Address must be a hex value of 20 bytes (40 hex characters).\n- Address must match its checksum counterpart.\n\nVersion: viem@2.18.4"
+    },
+    {
+      "source": "Barter",
+      "id": "barter",
+      "error": "The current context or config is not valid for source with id 'barter'"
+    },
+    {
+      "source": "Rango",
+      "id": "rango",
+      "error": "The current context or config is not valid for source with id 'rango'"
+    },
+    {
+      "source": "Changelly DEX",
+      "id": "changelly",
+      "error": "The current context or config is not valid for source with id 'changelly'"
+    },
+    {
+      "source": "Balmy",
+      "id": "balmy",
+      "error": "Balmy: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"{\\\"error\\\":{\\\"takerAddress\\\":\\\"Expected string, but was missing\\\"}}\""
+    },
+    {
+      "source": "Magpie",
+      "id": "magpie",
+      "error": "Magpie: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"{\\\"message\\\":\\\"Wrong parameters: $value at gasless is not valid. gasless must be a boolean\\\\n\\\",\\\"code\\\":1002,\\\"id\\\":\\\"3bafadfa-226b-4b01-834b-cc91771bdecd\\\"}\""
+    },
+    {
+      "source": "Squid",
+      "id": "squid",
+      "error": "The current context or config is not valid for source with id 'squid'"
+    },
+    {
+      "source": "Portals.fi",
+      "id": "portals-fi",
+      "error": "The current context or config is not valid for source with id 'portals-fi'"
+    },
+    {
+      "source": "Enso",
+      "id": "enso",
+      "error": "The current context or config is not valid for source with id 'enso'"
+    },
+    {
+      "source": "OKX Dex",
+      "id": "okx-dex",
+      "error": "The current context or config is not valid for source with id 'okx-dex'"
+    },
+    {
+      "source": "Conveyor",
+      "id": "conveyor",
+      "error": "Cannot use 'in' operator to search for 'errorStatus' in undefined"
+    },
+    {
+      "source": "DODO",
+      "id": "dodo",
+      "error": "The current context or config is not valid for source with id 'dodo'"
+    },
+    {
+      "source": "Balancer",
+      "id": "balancer",
+      "error": "Cannot read properties of null (reading 'sorGetSwapPaths')"
+    },
+    {
+      "source": "Swing",
+      "id": "swing",
+      "error": "Swing: failed to calculate a quote between 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48 and 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2 on Ethereum with error \"{\\\"statusCode\\\":400,\\\"message\\\":[\\\"The given address undefined is not valid for ethereum\\\",\\\"fromUserAddress should not be empty\\\",\\\"The given address undefined is not valid for ethereum\\\",\\\"toUserAddress should not be empty\\\"],\\\"error\\\":\\\"Bad Request\\\"}\""
+    }
+  ]
+}
