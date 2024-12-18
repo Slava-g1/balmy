@@ -5,47 +5,8 @@ const path = require("path");
 
 // Custom logging to capture output in JSON
 const outputLog = {
-    apiRequests: [],
-    apiResponses: [],
     successfulQuotes: [],
     failedQuotes: [],
-};
-
-// Override fetch to capture API requests and responses
-const originalFetch = global.fetch;
-
-global.fetch = async (url, options) => {
-    const startTime = new Date();
-    outputLog.apiRequests.push({
-        method: options?.method || "GET",
-        url: url,
-        timestamp: startTime.toISOString(),
-    });
-
-    try {
-        const response = await originalFetch(url, options);
-        const duration = new Date() - startTime;
-
-        outputLog.apiResponses.push({
-            url: url,
-            status: response.status,
-            durationMs: duration,
-            timestamp: new Date().toISOString(),
-        });
-
-        return response;
-    } catch (error) {
-        const duration = new Date() - startTime;
-        outputLog.apiResponses.push({
-            url: url,
-            status: "Error",
-            durationMs: duration,
-            error: error.message,
-            timestamp: new Date().toISOString(),
-        });
-
-        throw error;
-    }
 };
 
 // RPC Endpoint
@@ -71,7 +32,7 @@ async function fetchAllQuotes() {
                 type: "sell",
                 sellAmount: parseUnits("100", 6),
             },
-            slippagePercentage: 1,
+            slippagePercentage: 1, // 1% allowable slippage
         };
 
         console.log("Fetching all quotes (including failed responses)...");
@@ -90,6 +51,7 @@ async function fetchAllQuotes() {
                     source: quote.source?.name || "Unknown",
                     id: quote.source?.id || "N/A",
                     error: quote.error || "Unknown error",
+                    duration: quote.duration || "Unknown",
                 });
             } else {
                 outputLog.successfulQuotes.push({
@@ -100,6 +62,7 @@ async function fetchAllQuotes() {
                         ? `${formatUnits(String(quote.gas.estimatedCost), 18)} ETH`
                         : "N/A",
                     gasCostUSD: quote.gas?.estimatedCostInUSD || "N/A",
+                    duration: quote.duration || "Unknown",
                 });
             }
         });
@@ -112,9 +75,13 @@ async function fetchAllQuotes() {
             error: error.message,
         });
     } finally {
-        const filePath = path.resolve(__dirname, "outputLogs.json");
-        fs.writeFileSync(filePath, JSON.stringify(outputLog, null, 2));
-        console.log(`📝 Logs saved to ${filePath}`);
+        try {
+            const filePath = path.resolve(__dirname, "outputLogs.json");
+            fs.writeFileSync(filePath, JSON.stringify(outputLog, null, 2));
+            console.log(`📝 Logs saved to ${filePath}`);
+        } catch (writeError) {
+            console.error("Error saving logs to file:", writeError.message);
+        }
     }
 }
 
